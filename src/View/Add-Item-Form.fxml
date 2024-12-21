@@ -11,26 +11,29 @@
 
 <AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.AddItemFormController">
    <children>
-      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#1b3b59" height="487.0" stroke="BLACK" strokeType="INSIDE" width="602.0" />
-      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#1fffa4" height="57.0" stroke="BLACK" strokeType="INSIDE" width="600.0" />
-      <Label layoutX="196.0" layoutY="14.0" text="ADD ITEM FORM">
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#1b3b59" height="645.0" layoutY="-78.0" stroke="BLACK" strokeType="INSIDE" width="771.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#1fffa4" height="57.0" stroke="BLACK" strokeType="INSIDE" width="771.0" />
+      <Label layoutX="283.0" layoutY="14.0" text="ADD ITEM FORM">
          <font>
             <Font name="Perpetua Titling MT Bold" size="23.0" />
          </font>
       </Label>
-      <TextField fx:id="txtCode" layoutX="60.0" layoutY="106.0" promptText="Item Code" />
-      <TextField fx:id="txtQty" layoutX="60.0" layoutY="164.0" promptText="Qty" />
-      <TextField fx:id="txtName" layoutX="336.0" layoutY="106.0" promptText="Item Name" />
-      <TextField fx:id="txtPrice" layoutX="336.0" layoutY="164.0" promptText="Price" />
-      <Button layoutX="314.0" layoutY="224.0" mnemonicParsing="false" text="View Item" />
-      <TableView fx:id="tblItems" layoutX="12.0" layoutY="286.0" prefHeight="200.0" prefWidth="574.0">
+      <TextField fx:id="txtCode" layoutX="147.0" layoutY="106.0" promptText="Item Code" />
+      <TextField fx:id="txtQty" layoutX="147.0" layoutY="151.0" promptText="Qty" />
+      <TextField fx:id="txtName" layoutX="486.0" layoutY="106.0" promptText="Item Name" />
+      <TextField fx:id="txtPrice" layoutX="486.0" layoutY="151.0" promptText="Price" />
+      <Button layoutX="477.0" layoutY="284.0" mnemonicParsing="false" onAction="#btnViewItemsOnAction" text="View Items" />
+      <TableView fx:id="tblItems" layoutX="98.0" layoutY="364.0" prefHeight="141.0" prefWidth="574.0" style="-fx-background-color: #3dd;">
         <columns>
-          <TableColumn fx:id="colCode" prefWidth="93.60003471374512" text="Item Code" />
-          <TableColumn fx:id="colName" prefWidth="229.59998321533203" text="Item Name" />
-            <TableColumn fx:id="colQty" prefWidth="40.79998779296875" text="Qty" />
-            <TableColumn fx:id="colPrice" prefWidth="211.99990844726562" text="Price" />
+          <TableColumn fx:id="colCode" prefWidth="76.0000228881836" text="Item Code" />
+          <TableColumn fx:id="colName" prefWidth="112.79998779296875" text="Item Name" />
+            <TableColumn fx:id="colDesc" prefWidth="178.39996337890625" text="Description" />
+            <TableColumn fx:id="colQty" prefWidth="65.60006713867188" text="Qty" />
+            <TableColumn fx:id="colPrice" prefWidth="139.19998779296873" text="Price" />
         </columns>
       </TableView>
-      <Button layoutX="170.0" layoutY="224.0" mnemonicParsing="false" onAction="#btnAddItemOnAction" text="Add Item" />
+      <Button layoutX="257.0" layoutY="284.0" mnemonicParsing="false" onAction="#btnAddItemOnAction" text="Add Item" />
+      <TextField fx:id="txtDesc" layoutX="147.0" layoutY="204.0" promptText="Item Description" />
+      <Button layoutX="359.0" layoutY="284.0" mnemonicParsing="false" onAction="#btnDeleteItemOnAction" text="Delete Item" />
    </children>
 </AnchorPane>
