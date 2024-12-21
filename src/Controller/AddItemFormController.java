@@ -4,10 +4,7 @@ import Model.Item;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
-import javafx.scene.control.TableColumn;
-import javafx.scene.control.TableView;
-import javafx.scene.control.TextArea;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 
 import java.util.ArrayList;
@@ -28,6 +25,7 @@ public class AddItemFormController {
     public TableColumn colQty;
     public TableColumn colPrice;
     public TableColumn colDesc;
+    public Button btnDelete;
 
 
     ArrayList<Item> itemArrayList= new ArrayList<>();
@@ -47,6 +45,13 @@ public class AddItemFormController {
         itemArrayList.add(new Item(code,name,desc,qty,price));
 
         System.out.println(itemArrayList);
+
+        Alert a = new Alert(Alert.AlertType.NONE);
+        a.setAlertType(Alert.AlertType.CONFIRMATION);
+        a.show();
+        a.setTitle("Item Added");
+        a.setHeaderText("Item Added!");
+        a.setContentText("Item has been successfully added.");
 
 
     }
@@ -78,7 +83,11 @@ public class AddItemFormController {
     public void btnDeleteItemOnAction(ActionEvent actionEvent) {
         TableView.TableViewSelectionModel<Item> selectionModel = tblItems.getSelectionModel();
         if(selectionModel.isEmpty()){
-            System.out.println("You need select a data before deleting.");
+            Alert a = new Alert(Alert.AlertType.NONE);
+            a.setAlertType(Alert.AlertType.ERROR);
+            a.show();
+            a.setTitle("Error");
+            a.setHeaderText("Please select an item before deleting!");
         }
 
         ObservableList<Integer> list = selectionModel.getSelectedIndices();
@@ -91,5 +100,7 @@ public class AddItemFormController {
             selectionModel.clearSelection(selectedIndices[i].intValue());
             tblItems.getItems().remove(selectedIndices[i].intValue());
         }
+
+
     }
 }

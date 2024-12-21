@@ -34,6 +34,6 @@
       </TableView>
       <Button layoutX="257.0" layoutY="284.0" mnemonicParsing="false" onAction="#btnAddItemOnAction" text="Add Item" />
       <TextField fx:id="txtDesc" layoutX="147.0" layoutY="204.0" promptText="Item Description" />
-      <Button layoutX="359.0" layoutY="284.0" mnemonicParsing="false" onAction="#btnDeleteItemOnAction" text="Delete Item" />
+      <Button fx:id="btnDelete" layoutX="359.0" layoutY="284.0" mnemonicParsing="false" onAction="#btnDeleteItemOnAction" text="Delete Item" />
    </children>
 </AnchorPane>
