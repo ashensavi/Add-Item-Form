@@ -11,8 +11,8 @@
 
 <AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.AddItemFormController">
    <children>
-      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#1b3b59" height="645.0" layoutY="-78.0" stroke="BLACK" strokeType="INSIDE" width="771.0" />
-      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#1fffa4" height="57.0" stroke="BLACK" strokeType="INSIDE" width="771.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#2c586e" height="645.0" layoutY="-77.0" stroke="BLACK" strokeType="INSIDE" width="771.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#8da1af" height="57.0" stroke="BLACK" strokeType="INSIDE" width="771.0" />
       <Label layoutX="283.0" layoutY="14.0" text="ADD ITEM FORM">
          <font>
             <Font name="Perpetua Titling MT Bold" size="23.0" />
@@ -22,18 +22,28 @@
       <TextField fx:id="txtQty" layoutX="147.0" layoutY="151.0" promptText="Qty" />
       <TextField fx:id="txtName" layoutX="486.0" layoutY="106.0" promptText="Item Name" />
       <TextField fx:id="txtPrice" layoutX="486.0" layoutY="151.0" promptText="Price" />
-      <Button layoutX="477.0" layoutY="284.0" mnemonicParsing="false" onAction="#btnViewItemsOnAction" text="View Items" />
-      <TableView fx:id="tblItems" layoutX="98.0" layoutY="364.0" prefHeight="141.0" prefWidth="574.0" style="-fx-background-color: #3dd;">
+      <Button layoutX="479.0" layoutY="277.0" mnemonicParsing="false" onAction="#btnViewItemsOnAction" style="-fx-background-color: dd9f52;" text="View Items">
+         <font>
+            <Font size="18.0" />
+         </font></Button>
+      <TableView fx:id="tblItems" layoutX="51.0" layoutY="364.0" prefHeight="142.0" prefWidth="677.0" style="-fx-background-color: dcc894;">
         <columns>
           <TableColumn fx:id="colCode" prefWidth="76.0000228881836" text="Item Code" />
-          <TableColumn fx:id="colName" prefWidth="112.79998779296875" text="Item Name" />
-            <TableColumn fx:id="colDesc" prefWidth="178.39996337890625" text="Description" />
-            <TableColumn fx:id="colQty" prefWidth="65.60006713867188" text="Qty" />
-            <TableColumn fx:id="colPrice" prefWidth="139.19998779296873" text="Price" />
+          <TableColumn fx:id="colName" prefWidth="135.20001220703125" text="Item Name" />
+            <TableColumn fx:id="colDesc" prefWidth="215.99993896484375" text="Description" />
+            <TableColumn fx:id="colQty" prefWidth="55.200103759765625" text="Qty" />
+            <TableColumn fx:id="colPrice" prefWidth="192.800048828125" text="Price" />
         </columns>
       </TableView>
-      <Button layoutX="257.0" layoutY="284.0" mnemonicParsing="false" onAction="#btnAddItemOnAction" text="Add Item" />
+      <Button layoutX="204.0" layoutY="277.0" mnemonicParsing="false" onAction="#btnAddItemOnAction" style="-fx-background-color: dd9f52;" text="Add Item">
+         <font>
+            <Font size="18.0" />
+         </font></Button>
       <TextField fx:id="txtDesc" layoutX="147.0" layoutY="204.0" promptText="Item Description" />
-      <Button fx:id="btnDelete" layoutX="359.0" layoutY="284.0" mnemonicParsing="false" onAction="#btnDeleteItemOnAction" text="Delete Item" />
+      <Button fx:id="btnDelete" layoutX="341.0" layoutY="277.0" mnemonicParsing="false" onAction="#btnDeleteItemOnAction" style="-fx-background-color: dd9f52;" text="Delete Item">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Button>
    </children>
 </AnchorPane>

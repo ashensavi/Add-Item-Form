@@ -33,25 +33,33 @@ public class AddItemFormController {
     public void btnAddItemOnAction(ActionEvent actionEvent) {
 
 
-
-        System.out.println("Add Item Event");
-
         String code = txtCode.getText();
         String name = txtName.getText();
         String desc = txtDesc.getText();
         String qty = txtQty.getText();
         double price= Double.parseDouble(txtPrice.getText());
 
-        itemArrayList.add(new Item(code,name,desc,qty,price));
+        if (code.isEmpty() || name.isEmpty() || qty.isEmpty() || price==0){
 
-        System.out.println(itemArrayList);
+            Alert a = new Alert(Alert.AlertType.NONE);
+            a.setAlertType(Alert.AlertType.WARNING);
+            a.show();
+            a.setTitle("Warning");
+            a.setHeaderText("Please Fill out the fields!");
+            return;
+        } else {
 
-        Alert a = new Alert(Alert.AlertType.NONE);
-        a.setAlertType(Alert.AlertType.CONFIRMATION);
-        a.show();
-        a.setTitle("Item Added");
-        a.setHeaderText("Item Added!");
-        a.setContentText("Item has been successfully added.");
+            itemArrayList.add(new Item(code, name, desc, qty, price));
+
+            System.out.println(itemArrayList);
+
+            Alert a = new Alert(Alert.AlertType.NONE);
+            a.setAlertType(Alert.AlertType.CONFIRMATION);
+            a.show();
+            a.setTitle("Item Added");
+            a.setHeaderText("Item Added!");
+            a.setContentText("Item has been successfully added.");
+        }
 
 
     }
